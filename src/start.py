@@ -1,6 +1,6 @@
 from flask import Flask
 from petitions.server_info import ServerInfo
-import os
+import os, logging
 
 app = Flask(__name__)
 server_info = ServerInfo(os.environ['RCON_PASSWORD'],'sollercraft.gotes.org')

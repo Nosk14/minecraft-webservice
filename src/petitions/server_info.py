@@ -1,5 +1,5 @@
 from petitions.rcon import Request, ConnectionManager
-import datetime, json
+import datetime, json, logging
 
 class Status:
     def __init__(self):
@@ -48,7 +48,7 @@ class ServerInfo:
             try:
                 self.__cache = self.__update_info()
             except Exception as e:
-                print(e)
+                logging.error(e)
                 status = Status()
                 status.lastUpdate = datetime.datetime.utcnow()
                 self.__cache = status

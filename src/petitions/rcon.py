@@ -1,4 +1,4 @@
-import socket, struct, time
+import socket, struct, time, logging
 
 class Request:
     
